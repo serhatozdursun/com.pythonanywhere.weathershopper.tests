@@ -39,5 +39,5 @@ RUN apt-get install -y --no-install-recommends git
 RUN git clone https://github.com/serhatozdursun/com.pythonanywhere.weathershopper.tests.git --branch master
 
 ##run project
-RUN cd in.amozon.test.project &&\
+RUN cd com.pythonanywhere.weathershopper.tests &&\
     mvn test
