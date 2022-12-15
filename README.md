@@ -10,6 +10,7 @@
         + [Selenium Grid](#grid)
         + [How to run](#run)
         + [Dockerizing](#docker)
+        + [GitHub Actions](#action)
 <a name="overview"></a>
 ## Overview
 The project has been developed with java. It is a BDD project written by using Cucumber
@@ -59,3 +60,7 @@ mvn test
 <a name="docker"></a>
 ## Docker
 You can use [DockerFile](https://github.com/serhatozdursun/com.pythonanywhere.weathershopper.tests/blob/master/DockerFile) from repo to dockerize the framework
+
+<a name="action"></a>
+## GitHub Actions
+The project builds and executes the test for each push on [GitHubActions](https://github.com/serhatozdursun/com.pythonanywhere.weathershopper.tests/actions)
