@@ -44,7 +44,7 @@ I've used the cucumber report, it generates the reports under the reports direct
 
 <a name="grid"></a>
 ## Selenium Grid
-if you pass the selenium the grid URL in to the [config.properties](https://github.com/serhatozdursun/com.pythonanywhere.weathershopper.tests/blob/master/src/test/resources/config.properties) file, as a parameter like below the test will run on the selenium grid
+if you pass the selenium grid URL in to the [config.properties](https://github.com/serhatozdursun/com.pythonanywhere.weathershopper.tests/blob/master/src/test/resources/config.properties) file, as a parameter like below the test will run on the selenium grid
 
 ```
 grid.url=http://192.168.1.53:4444/
