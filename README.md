@@ -36,7 +36,7 @@ it provides to support just Chrome, Firefox, Edge (not tested) and Safari for no
 <a name="report"></a>
 ## Report
 
-I've used the cucumber report, it generates the reports under the reports directory. It generates two types of reports, an HTML and a JSON report. If a failure occurs, it will take a screenshot, if the scanner is still working. So it will add that screenshot to the report
+I've used the cucumber report, it generates the reports under the reports directory. It generates two types of reports, an HTML and a JSON report. If a failure occurs, it will take a screenshot, if the browser is still working. So it will add that screenshot to the report
 </br>
 </br>
 </br>
