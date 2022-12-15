@@ -1,3 +1,5 @@
+![badge](https://github.com/serhatozdursun/com.pythonanywhere.weathershopper.tests/actions/workflows/maven.yml/badge.svg)
+
 # Test Automation Framework for Beyonnex
 
 - Example Test Automation Framework

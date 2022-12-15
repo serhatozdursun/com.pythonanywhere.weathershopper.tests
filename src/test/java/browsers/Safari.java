@@ -2,14 +2,11 @@ package browsers;
 
 import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.safari.SafariDriverService;
 import org.openqa.selenium.safari.SafariOptions;
 
 import java.net.URL;
 
 public class Safari implements BrowserSelectable {
-
-    private SafariDriverService safariDriverService;
 
     @Override
     public MutableCapabilities getCapabilities() {
