@@ -36,7 +36,7 @@ it provides to support just Chrome, Firefox, Edge (not tested) and Safari for no
 <a name="report"></a>
 ## Report
 
-I've used the cucumber report, it generates the reports under the reports directory. It generates two types of reports, an HTML and a JSON report. If a failure occurs, it will take a screenshot, if the scanner is still working. So it will add that screenshot to the report
+I've used the cucumber report, it generates the reports under the reports directory. It generates two types of reports, an HTML and a JSON report. If a failure occurs, it will take a screenshot, if the browser is still working. So it will add that screenshot to the report
 </br>
 </br>
 </br>
@@ -44,7 +44,7 @@ I've used the cucumber report, it generates the reports under the reports direct
 
 <a name="grid"></a>
 ## Selenium Grid
-if you pass the selenium the grid URL in to the [config.properties](https://github.com/serhatozdursun/com.pythonanywhere.weathershopper.tests/blob/master/src/test/resources/config.properties) file, as a parameter like below the test will run on the selenium grid
+if you pass the selenium grid URL in to the [config.properties](https://github.com/serhatozdursun/com.pythonanywhere.weathershopper.tests/blob/master/src/test/resources/config.properties) file, as a parameter like below the test will run on the selenium grid
 
 ```
 grid.url=http://192.168.1.53:4444/
