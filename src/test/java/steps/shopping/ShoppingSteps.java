@@ -4,7 +4,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.cucumber.java.eo.Do;
+
 import pages.CartPage;
 import pages.HomePage;
 import pages.ProductPage;
@@ -12,6 +12,7 @@ import pages.SuccessPage;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static pages.HomePage.getCurrentTemperature;
@@ -21,12 +22,12 @@ public class ShoppingSteps {
     private static String productPageName;
     private String currentTemp;
 
-    private HomePage homePage = new HomePage();
-    private ProductPage productPage = new ProductPage();
+    private final HomePage homePage = new HomePage();
+    private final ProductPage productPage = new ProductPage();
 
-    private CartPage cartPage = new CartPage();
+    private final CartPage cartPage = new CartPage();
 
-    private SuccessPage successPage = new SuccessPage();
+    private final SuccessPage successPage = new SuccessPage();
 
     @Given("Random temperature")
     public void random_temperature() {
@@ -79,17 +80,17 @@ public class ShoppingSteps {
     @Then("Verify that the shopping cart looks correct")
     public void verifyThatTheShoppingCartLooksCorrect() {
         assertEquals("Checkout", cartPage.getTitle());
-        var addedCardList = productPage.getAddedProducts();
+        var addedCardList = ProductPage.getAddedProducts();
         var cartProductList = cartPage.getCartProducts();
         assertEquals(addedCardList, cartProductList);
         var totalText = cartPage.getTotal().replace("Total: Rupees ", "");
         var total = Double.parseDouble(totalText);
         var expectedTotal = cartProductList
                 .stream()
-                .map(i -> i.entrySet().stream().map(m -> m.getValue()).reduce(Double::sum))
-                .map(i -> i.get())
+                .map(i -> i.values().stream().reduce(Double::sum))
+                .map(Optional::get)
                 .reduce(Double::sum)
-                .get();
+                .isPresent();
         assertEquals(expectedTotal, total);
     }
 
