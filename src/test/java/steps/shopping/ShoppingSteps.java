@@ -92,6 +92,7 @@ public class ShoppingSteps {
                 .map(Optional::get)
                 .reduce(Double::sum)
                 .get();
+
         assertEquals(expectedTotal, total);
     }
 
