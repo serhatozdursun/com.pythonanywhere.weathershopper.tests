@@ -88,9 +88,10 @@ public class ShoppingSteps {
         var expectedTotal = cartProductList
                 .stream()
                 .map(i -> i.values().stream().reduce(Double::sum))
+                .filter(Optional::isPresent)
                 .map(Optional::get)
                 .reduce(Double::sum)
-                .isPresent();
+                .get();
         assertEquals(expectedTotal, total);
     }
 
